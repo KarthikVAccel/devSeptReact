@@ -45,7 +45,17 @@ Skip: <input type="number" placeholder="skip" value={skip} onChange={(e)=>setSki
   console.log(err); 
 })
 }}>Fetch Todos</button>
-
+<button onClick={()=>{
+ axios.post(`https://dummyjson.com/todos/add`,{
+    todo: 'Use DummyJSON in the project',
+    completed: false,
+    userId: 5,
+  }).then((res)=>{
+  setTodo([res.data]);
+ }).catch((err)=>{
+  console.log(err); 
+})
+}}>Add Todos</button>
      
     </div>
   );
