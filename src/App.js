@@ -1,7 +1,8 @@
 import logo from "./logo.svg";
 import "./App.css";
-import Counter from "./continer/counter";
-import TodoLocal from "./continer/todo";
+import Counter from "./container/counter";
+import TodoLocal from "./container/todo";
+import TodoOnline from "./container/todoOnline";
 import React, { useEffect, useState } from "react";
 
 
@@ -9,9 +10,7 @@ let App = () =>{
 
   return(
     <div>
-       <Counter></Counter>
-       <hr></hr>
-       <TodoLocal />
+       <TodoOnline />
     </div>
   )
 }
